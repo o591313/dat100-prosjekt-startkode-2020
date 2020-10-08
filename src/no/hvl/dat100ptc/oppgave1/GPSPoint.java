@@ -5,7 +5,7 @@ import no.hvl.dat100ptc.TODO;
 public class GPSPoint {
 
 	// TODO - objektvariable
-	// dobbelsjekk variabeltypene -lyslo
+	
 	private int time;
 	private double latitude;
 	private double longitude;
