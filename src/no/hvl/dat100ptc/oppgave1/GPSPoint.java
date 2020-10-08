@@ -5,7 +5,7 @@ import no.hvl.dat100ptc.TODO;
 public class GPSPoint {
 
 	// TODO - objektvariable
-	// dobbeltsjekk variabeltypene -lyslo
+	// dobbelsjekk variabeltypene -lyslo
 	private int time;
 	private double latitude;
 	private double longitude;
@@ -13,10 +13,10 @@ public class GPSPoint {
 
 	// TODO - konstruktur
 	public GPSPoint(int time, double latitude, double longitude, double elevation) {
-		time = 0;
-		latitude = 0;
-		longitude = 0;
-		elevation = 0;
+		this.time = time;
+		this.latitude = latitude;
+		this.longitude = longitude;
+		this.elevation = elevation;
 	}
 
 	// TODO - get/set metoder
@@ -74,8 +74,13 @@ public class GPSPoint {
 
 		// TODO - start
 
-		throw new UnsupportedOperationException(TODO.method());
+		String time = Integer.toString(this.time);
+		String latitude = String.valueOf(this.latitude);
+		String longitude = String.valueOf(this.longitude);
+		String elevation = String.valueOf(this.elevation);
 
+		str = time + " (" + latitude + "," + longitude + ") " + elevation + "\n";
+		return str;
 		// TODO - slutt
 
 	}
