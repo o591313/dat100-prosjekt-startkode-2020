@@ -28,7 +28,7 @@ public class GPSData {
 
 		// TODO - START
 
-		if (antall < gpspoints.length) {
+		if (antall <= gpspoints.length-1) {
 			gpspoints[antall] = gpspoint;
 			inserted = true;
 			antall++;
@@ -46,7 +46,7 @@ public class GPSData {
 		GPSPoint gpspoint;
 
 		// TODO - START
-		//        ¯\_(ツ)_/¯  
+		// ¯\_(ツ)_/¯
 		boolean insert = false;
 		gpspoint = GPSDataConverter.convert(time, latitude, longitude, elevation);
 
