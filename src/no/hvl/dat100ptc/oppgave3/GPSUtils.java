@@ -46,7 +46,11 @@ public class GPSUtils {
 
 		// TODO - START
 
-		throw new UnsupportedOperationException(TODO.method());
+		double[] latitudes = new double[gpspoints.length];
+		for(int i = 0; i < latitudes.length; i++) {
+			
+			
+		}
 
 		// TODO - SLUTT
 	}

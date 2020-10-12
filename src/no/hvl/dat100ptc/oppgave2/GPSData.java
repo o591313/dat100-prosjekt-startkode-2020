@@ -46,7 +46,7 @@ public class GPSData {
 		GPSPoint gpspoint;
 
 		// TODO - START
-		// ¯\_(ツ)_/¯
+
 		boolean insert = false;
 		gpspoint = GPSDataConverter.convert(time, latitude, longitude, elevation);
 
