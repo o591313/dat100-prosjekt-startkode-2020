@@ -2,7 +2,6 @@ package no.hvl.dat100ptc.oppgave2;
 
 import no.hvl.dat100ptc.TODO;
 import no.hvl.dat100ptc.oppgave1.GPSPoint;
-import static java.lang.Integer.parseInt;
 
 public class GPSDataConverter {
 
@@ -22,11 +21,11 @@ public class GPSDataConverter {
 		// OPPGAVE - START
 
 		String hours = timestr.substring(11, 13);
-		hr = parseInt(hours);
+		hr = Integer.parseInt(hours);
 		String minutes = timestr.substring(14, 16);
-		min = parseInt(minutes);
+		min = Integer.parseInt(minutes);
 		String seconds = timestr.substring(17, 19);
-		sec = parseInt(seconds);
+		sec = Integer.parseInt(seconds);
 
 		secs = (hr * 60 * 60) + (min * 60) + sec;
 		return secs;

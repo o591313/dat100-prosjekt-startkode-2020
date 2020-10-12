@@ -46,21 +46,29 @@ public class GPSUtils {
 
 		// TODO - START
 
-//		double[] latitudes = new double[gpspoints.length];
-//		for(int i = 0; i < latitudes.length; i++) {
-//			
-		throw new UnsupportedOperationException(TODO.method());
-			
+		double[] latitudes = new double[gpspoints.length];
+
+		for (int i = 0; i < gpspoints.length; i++) {
+			latitudes[i] = gpspoints[i].getLatitude();
 		}
 
-		// TODO - SLUTT
-	
+		return latitudes;
+
+	}
+
+	// TODO - SLUTT
 
 	public static double[] getLongitudes(GPSPoint[] gpspoints) {
 
 		// TODO - START
 
-		throw new UnsupportedOperationException(TODO.method());
+		double[] longitudes = new double[gpspoints.length];
+
+		for (int i = 0; i < gpspoints.length; i++) {
+			longitudes[i] = gpspoints[i].getLongitude();
+		}
+
+		return longitudes;
 
 		// TODO - SLUTT
 
@@ -75,7 +83,21 @@ public class GPSUtils {
 
 		// TODO - START
 
-		throw new UnsupportedOperationException(TODO.method());
+		latitude1 = Math.toRadians(gpspoint1.getLatitude());
+		longitude1 = Math.toRadians(gpspoint1.getLongitude());
+		latitude2 = Math.toRadians(gpspoint2.getLatitude());
+		longitude2 = Math.toRadians(gpspoint2.getLongitude());
+
+		double difflat = latitude2 - latitude1;
+		double difflong = longitude2 - longitude1;
+
+		double a = Math.pow(Math.sin(difflat / 2), 2)
+				+ Math.cos(latitude1) * Math.cos(latitude2) * Math.pow(Math.sin(difflong / 2), 2);
+
+		double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+		d = R * c;
+
+		return d;
 
 		// TODO - SLUTT
 
