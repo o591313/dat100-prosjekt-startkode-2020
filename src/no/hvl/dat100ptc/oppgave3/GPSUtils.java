@@ -110,7 +110,12 @@ public class GPSUtils {
 
 		// TODO - START
 
-		throw new UnsupportedOperationException(TODO.method());
+		double distance = distance(gpspoint1, gpspoint2);
+		secs = gpspoint2.getTime() - gpspoint1.getTime();
+
+		speed = (distance / secs) * 3.6;
+
+		return speed;
 
 		// TODO - SLUTT
 
@@ -119,11 +124,18 @@ public class GPSUtils {
 	public static String formatTime(int secs) {
 
 		String timestr;
-		String TIMESEP = ":";
 
 		// TODO - START
 
-		throw new UnsupportedOperationException(TODO.method());
+		int h, m, s;
+
+		h = secs / 3600;
+		m = (secs / 60) % 60;
+		s = secs % 60;
+
+		timestr = String.format("%02d:%02d:%02d", h, m, s);
+
+		return String.format("%10s", timestr);
 
 		// TODO - SLUTT
 
@@ -137,7 +149,9 @@ public class GPSUtils {
 
 		// TODO - START
 
-		throw new UnsupportedOperationException(TODO.method());
+		str = String.format("%10.2f", d);
+
+		return str.replaceAll(",", ".");
 
 		// TODO - SLUTT
 
