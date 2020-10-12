@@ -28,7 +28,7 @@ public class GPSData {
 
 		// TODO - START
 
-		if (antall <= gpspoints.length-1) {
+		if (antall < gpspoints.length) {
 			gpspoints[antall] = gpspoint;
 			inserted = true;
 			antall++;
